@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/location', [LocationSearchController::class, 'search']);
+Route::post('/location', [LocationSearchController::class, 'search']);

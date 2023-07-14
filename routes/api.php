@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\LocationSearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-use App\Http\Controllers\UserController;
-
-Route::get('/location', function () {
-    return response()->json([
-        'users' => [
-            ['name' => 'John Doe', 'email' => 'john@example.com'],
-            ['name' => 'Jane Smith', 'email' => 'jane@example.com'],
-        ]
-    ]);
-});
+Route::get('/location', [LocationSearchController::class, 'search']);

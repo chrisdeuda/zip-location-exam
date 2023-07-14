@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/location', [LocationSearchController::class, 'search']);
+Route::post('/location/nearby', [LocationSearchController::class, 'search']);
